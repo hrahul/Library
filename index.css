@@ -1,0 +1,79 @@
+body{
+    background: linear-gradient(to right , #EAD6EE ,#A0F1EA);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Mingzat', sans-serif;
+
+}
+.header{
+    display: flex;
+    box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 8px;
+    justify-content: center;
+    align-items: center;
+    border: 2px soilid black; 
+}
+
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    
+}
+.fitem{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+input,input::after,input::before{
+    border-radius:5px ;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+select{
+    width: 100px;
+    margin-top:20px ;
+    color: green;
+}
+
+.btn{
+    width: 100px;
+    margin-top:20px ;
+}
+
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+}
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.card{
+    background: rgba(0,0,0, 0.3);
+    height: 200px;
+    width: 100px;
+    margin: 2vh;
+}
+.left{
+    background: rgba(0,0,0, 0.3);
+    padding: 2vh;
+    border-radius:5px ;
+    width: 50%;
+    margin: 20px;
+    height: 50vh;
+}
+.right{
+    background: rgba(0,0,0, 0.3);
+    padding: 2vh;
+    border-radius:5px ;
+    width: 50%;
+}
