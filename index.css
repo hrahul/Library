@@ -41,7 +41,7 @@ input,input::after,input::before{
 
 .footer{
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0;
     justify-content: center;
     width: 100%;
@@ -53,10 +53,16 @@ a, a:hover, a:focus, a:active{
     
 }
 .card{
+    display: flex;
     background: rgba(255,255,255,0.5);
     height: 200px;
     width: 100px;
-    margin: 2vh;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+    border-radius: 5px;
+    flex-direction:column;
 }
 .left{
     background: rgba(0,0,0, 0.3);
@@ -67,10 +73,13 @@ a, a:hover, a:focus, a:active{
     height: 70vh;
 }
 .right{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     background: rgba(0,0,0, 0.3);
-    padding: 2vh;
+    padding: 20px;
     border-radius:5px ;
-    width: 80%;
-    height:70vh;
+    width: min(80%);
+    height:min(70vh);
+    flex-direction:row;
 }
 
