@@ -1,33 +1,45 @@
 let myLibrary = [];
 
-
-function Book(title,author,pages,read) {
+//Book Object
+function Book(title,author,pages) {
     this.title = title ;
     this.author = author;
     this.pages = pages;
-    this.read = read ;
+   // this.read = read ;
 }
-
+//Add Book Object to array
 function addBookToLibrary(Book) {
-    console.log(Book);
-  myLibrary.push(Book);
+    myLibrary.push(Book);
+    myLibrary.forEach(obj=>{  
+        const right = document.querySelector('.right');
+        const card = document.createElement('div');
+        const title =  document.createElement('p');
+        const author =  document.createElement('p');
+        const pages =  document.createElement('p');
+        card.classList.add('card');
+        title.textContent = obj.title;
+        author.textContent = obj.author;
+        pages.textContent = obj.pages;
+
+        card.appendChild(title);
+        card.appendChild(author);
+        card.appendChild(pages);
+        right.appendChild(card);
+
+    });
+
 }
 
 btn = document.querySelector('.btn')
-
 btn.addEventListener('click',()=>{
-    
     title = document.querySelector('#title').value;
     author = document.querySelector('#author').value;
     pages = document.querySelector('#pages').value;
-    readStatus = document.querySelector('#read').value;
-    let newBook = new Book(title,author,pages,read) ;
+    let newBook = new Book(title,author,pages) ;
     addBookToLibrary(newBook);
 
-    clear();
-
-
 });
+
 
 function clear()
 {
@@ -35,7 +47,6 @@ function clear()
     document.querySelector('#author').value = "";
     document.querySelector('#pages').value = " ";
 }
-myLibrary.forEach(i => {
-    console.log(myLibrary[i]);
-});
+
+
 
